@@ -1,0 +1,32 @@
+﻿@model CRUDApplication.Models.ViewModels.EmployeeUpdateViewModel
+
+<h1>Update Employee</h1>
+
+<form method="post" action="View">
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="form-group">
+        <label for="">Email adress</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="form-group">
+        <label for="">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="form-group">
+        <label for="">Date of birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+    <div class="form-group">
+        <label for="">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-danger" asp-controller="Employee" asp-action="Delete">Delete</button>
+</form>

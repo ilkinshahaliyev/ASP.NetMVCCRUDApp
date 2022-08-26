@@ -1,0 +1,35 @@
+﻿@model List<Employee>
+
+<h1>Employees</h1>
+
+@{
+    int i = 0;
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Department</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <th scope="row">@(++i)</th>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>@employee.Salary</td>
+                <td>@employee.Department</td>
+                <td><a href="Employee/View/@employee.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
